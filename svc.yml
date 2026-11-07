@@ -3,6 +3,7 @@ kind: Service
 
 metadata:
   name: django-demo-service
+  namespace: default
 
 spec:
   type: NodePort
@@ -11,7 +12,7 @@ spec:
     app: django-demo
 
   ports:
-    - port: 8000
+    - name: http
+      port: 8000
       targetPort: 8000
-      nodePort: 30080
       protocol: TCP
