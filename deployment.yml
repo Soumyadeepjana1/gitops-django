@@ -18,10 +18,9 @@ spec:
 
     spec:
       containers:
-        - name: django-demo
-          image: soumyadeep7872/django-demo:tagname
+        - name: nginx
+          image: nginx:stable-alpine
+          imagePullPolicy: Always
 
           ports:
-            - containerPort: 8000
-
-          imagePullPolicy: Always
+            - containerPort: 80
