@@ -21,6 +21,5 @@ spec:
         - name: nginx
           image: nginx:stable-alpine
           imagePullPolicy: Always
-
           ports:
             - containerPort: 80
